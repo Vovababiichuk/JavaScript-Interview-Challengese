@@ -13,8 +13,26 @@ Example output: "I'M 😱 ALMOST 😱 OUT 😱 OF 😱 COFFEE!"
 
 .split() .join()
 */
+
+//! v1
+
+// const panic = (str) => {
+// 	return str.toUpperCase().split(' ').map((word, index, arr) => {
+// 		if (word === arr[arr.length - 1]) {
+// 			return word + '!';
+// 		}
+// 		return `${word} 😱`
+// 	}).join(' ')
+// }
+
+// // Test your function
+// console.log(panic("I'm almost out of coffee"));
+// console.log(panic("winter is coming"))
+
+//! v2
+
 const panic = str => {
-  return str;
+  return str.split(' ').join(' 😱 ').toUpperCase() + '!';
 };
 
 // Test your function
